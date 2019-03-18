@@ -3,6 +3,10 @@
 	font-family: 'centurygothic';
 	src: url('../../fonts/centurygothic.ttf');
 }
+@font-face{
+	font-family: 'FuturaPTBold';
+	src: url('../../fonts/FuturaPTBold.otf');
+}
 	
 @font-face {
   font-family: 'Material Icons';
@@ -14,6 +18,15 @@
 
 *{
 	font-family: 'centurygothic' !important;
+}
+h1,h2,h3,h4,h5{
+	font-family: 'FuturaPTBold' !important;
+	text-transform: uppercase;
+}
+
+.title-icon{
+	    top: 10px;
+    position: relative;
 }
 a, .tabs .tab a{
 	color: #0d47a1;

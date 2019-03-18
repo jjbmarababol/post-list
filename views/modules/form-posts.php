@@ -13,18 +13,13 @@
 			<div class="card-panel transparent frosted floating">
 				<div class="col s12 ">
 					<div class="row">
-						<form id="postForm" method="post" action="javascript:void(0);">
+						<form id="postForm" method="post" action="javascript:void(0);" enctype="multipart/form-data">
 							<input type="hidden" name="controller" id="controller" value="updateInsert" class="post-field">
+							<input type="hidden" name="ending" id="ending" class="post-field">
 						
 							<div class="input-field col s12">
 								<i class="material-icons prefix">comment</i>
-								<input id="text" name="textbox" type="text" class="validate post-field" data-length="50">
-								<label for="text">Textbox</label>
-								<span class="helper-text" data-error="Wrong!" data-success="Correct!">Max Characters: 50</span>
-							</div>
-							<div class="input-field col s12">
-								<i class="material-icons prefix">comment</i>
-								<input id="text" name="imageUrl" type="text" class="validate post-field" data-length="50">
+								<input id="text" name="mtitle" type="text" class="validate post-field" data-length="50" required>
 								<label for="text">Textbox</label>
 								<span class="helper-text" data-error="Wrong!" data-success="Correct!">Max Characters: 50</span>
 							</div>
@@ -32,34 +27,41 @@
 								<label class="active">Radio Buttons</label>
 								<p>
 									<label>
-										<input name="radiobutton" type="radio" value="Hi" checked />
+										<input name="intro" type="radio" value="Hi" checked />
 										<span>Hi</span>
 									</label>
 								</p>
 								<p>
 									<label>
-										<input name="radiobutton" type="radio" value="Hello" />
+										<input name="intro" type="radio" value="Hello" />
 										<span>Hello</span>
 									</label>
 								</p>
 							</div>
-
 							<div class="input-field col s12">
 								<label class="active">Radio Buttons</label>
 								<p>
 									<label>
-										<input name="checkbutton" type="checkbox" value="World" checked />
+										<input class="field-ending" type="checkbox" data-value="World" checked />
 										<span>World!</span>
 									</label>
 								</p>
 								<p>
 									<label>
-										<input name="checkbutton" type="checkbox" value="Web" />
+										<input class="field-ending" type="checkbox" data-value="Web" />
 										<span>Web!</span>
 									</label>
 								</p>
 							</div>
-							
+							<div class="file-field input-field col s12">
+								<div class="btn theme-grey-bg">
+									<span>File</span>
+									<input type="file" name="imageUrl" accept=".png, .jpg, .jpeg">
+								</div>
+								<div class="file-path-wrapper">
+									<input class="file-path validate" type="text">
+								</div>
+							</div>
 							<div class="row">
 								<div class="col s12 center">
 									<button type="submit" class="btn btn-large theme-grey-bg white-text waves-effect waves-light"><i class="material-icons left">save</i>Save</button>

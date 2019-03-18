@@ -8,27 +8,18 @@ var Posts = {
 		},"json");
 	},
 	updateInsert: function(url, formData){
-		// var rawData = $(formData).serializeArray();
-		// var output = [];
-		// rawData.forEach(function(item) {
-		// 	var existing = output.filter(function(v, i) {
-		// 		return v.name == item.name;
-		// 	});
-		// 	if (existing.length) {
-		// 		var existingIndex = output.indexOf(existing[0]);
-		// 		output[existingIndex].value = output[existingIndex].value.concat(item.value);
-		// 	} else {
-		// 		if (typeof item.value == 'string')
-		// 		item.value = [item.value];
-		// 		output.push(item);
-		// 	}
-		// });
+		var ending = $("input[class=field-ending]:checked").map(function() {
+			return $(this).data("value");
+		}).get().join(" and ");
+		$("#ending").val(ending+"!");
+
 		$.post(base_url + url, $(formData).serialize(), function(data){
 			if(data.response == "Success") {
-				M.toast({html: "Success! Nice one.",classes: "green white-text"});
-				Posts.resetForm();
+				M.toast({html: data.message ,classes: "green white-text",displayLength:500,completeCallback:function(){
+					window.location.href='?p=dashboard';
+				}});
 			}else{
-				M.toast({html: "Failed! Plate Number Already Exists.",classes: "red llighten-1 white-text"});
+				M.toast({html:  data.message ,classes: "red llighten-1 white-text"});
 			}
 		},"json");
 	},

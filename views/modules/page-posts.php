@@ -29,10 +29,10 @@
 								</thead>
 								<tbody>
 									<?php foreach ($posts->showPosts() as $key => $row): ?>
-											<tr id="row<?=$row['postId'] ?>">
+											<tr id="row<?=$row['mId'] ?>">
 												<td><?=$x++;?></td>
 												<td>
-													<p class="blue-text text-darken-4 bold"><a href="?p=post&id=<?=$row['postId'];?>" class="tooltipped"  data-position="right" data-tooltip="View Profile"><i class="material-icons left grey-text text-darken-3">credit_postd</i><?=$row['text'] ?></a></p>
+													<p class="blue-text text-darken-4 bold"><a href="?p=post&id=<?=$row['mId'];?>" class="tooltipped"  data-position="right" data-tooltip="View Profile"><i class="material-icons left grey-text text-darken-3">email</i><?=$row['mtitle'] ?></a></p>
 												</td>
 												
 											</tr>

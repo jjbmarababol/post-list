@@ -1,5 +1,5 @@
-<?php include '../../config/config.php' ?>
-<?php include('../../library/lib_posts.php'); ?>
+<?php include ('../config/config.php'); ?>
+<?php include('../library/lib_posts.php'); ?>
 <?php 
 	$posts = new lib_posts();
 	switch ($_REQUEST['controller']) {
