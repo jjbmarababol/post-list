@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.7
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Mar 17, 2019 at 11:42 PM
--- Server version: 10.1.30-MariaDB
--- PHP Version: 7.2.2
+-- Host: 127.0.0.1:3306
+-- Generation Time: Mar 19, 2019 at 03:26 AM
+-- Server version: 5.7.23
+-- PHP Version: 7.0.32
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,49 +19,34 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `marababol`
+-- Database: `testdb`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `posts`
+-- Table structure for table `marababol`
 --
 
-CREATE TABLE `posts` (
-  `postId` int(11) NOT NULL,
-  `text` varchar(50) NOT NULL,
-  `radio` varchar(100) NOT NULL,
-  `checkbox` varchar(100) NOT NULL,
-  `imageUrl` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+DROP TABLE IF EXISTS `marababol`;
+CREATE TABLE IF NOT EXISTS `marababol` (
+  `mId` int(11) NOT NULL AUTO_INCREMENT,
+  `mtitle` varchar(100) NOT NULL,
+  `intro` varchar(100) NOT NULL,
+  `ending` varchar(100) NOT NULL,
+  `imageurl` text,
+  `dateCreated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`mId`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `posts`
+-- Dumping data for table `marababol`
 --
 
-INSERT INTO `posts` (`postId`, `text`, `radio`, `checkbox`, `imageUrl`) VALUES
-(1, 'Mehehe', 'Hello', 'World', '');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `posts`
---
-ALTER TABLE `posts`
-  ADD PRIMARY KEY (`postId`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `posts`
---
-ALTER TABLE `posts`
-  MODIFY `postId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+INSERT INTO `marababol` (`mId`, `mtitle`, `intro`, `ending`, `imageurl`, `dateCreated`) VALUES
+(1, 'First Post', 'Hi', 'World!', '612814user-2.png', '2019-03-19 03:23:10'),
+(2, 'Second Post', 'Hi', 'World!', '69687user-4.png', '2019-03-19 03:23:27'),
+(3, 'Third Post', 'Hello', 'World and Web!', NULL, '2019-03-19 03:23:46');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

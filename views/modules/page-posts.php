@@ -23,18 +23,20 @@
 						<table class="table responsive-table highlight dataTable no-footer">
 							<thead>
 								<tr class="hide-on-med-and-down">
-									<th>No.</th>
-										<th>Post Title</th>
+										<th></th>
+										<th>Post</th>
+										<th>Date Created</th>
 									</tr>
 								</thead>
 								<tbody>
 									<?php foreach ($posts->showPosts() as $key => $row): ?>
 											<tr id="row<?=$row['mId'] ?>">
-												<td><?=$x++;?></td>
-												<td>
-													<p class="blue-text text-darken-4 bold"><a href="?p=post&id=<?=$row['mId'];?>" class="tooltipped"  data-position="right" data-tooltip="View Profile"><i class="material-icons left grey-text text-darken-3">email</i><?=$row['mtitle'] ?></a></p>
+												<td><img src="<?=URI::picturePath(($row['imageurl'])? $row['imageurl'] : 'default.png')?>" alt="" class="circle responsive" width='80'></td>
+												<td class="valign-wrapper">
+													
+													<p class="blue-text text-darken-4 bold"><a href="?p=post&id=<?=$row['mId'];?>" class="tooltipped"  data-position="right" data-tooltip="View Profile"><?=$row['mtitle'] ?></a></p>
 												</td>
-												
+												<td><?=$row['dateCreated'] ?></a></td>
 											</tr>
 									<?php endforeach;?>
 								</tbody>

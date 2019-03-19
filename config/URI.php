@@ -48,8 +48,8 @@
 				echo self::phpUrlPath() . "/public/assets/images/".$FILES_NAME; 
 			}
 		}
-		public static function picturePath($FILES_NAME,$type){
-			echo self::PHP_URL_PATH() . "/public/upload/".$type."/".$FILES_NAME; 
+		public static function picturePath($FILES_NAME){
+			echo self::phpUrlPath() . "/public/uploads/".$FILES_NAME; 
 		}
 	}
  ?>		

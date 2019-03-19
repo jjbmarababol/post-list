@@ -12,4 +12,5 @@ var materializeInit = () => {
 	$('.fixed-action-btn').floatingActionButton();
 	$('.tooltipped').tooltip();
 	$('.modal').modal();
+	$('.materialboxed').materialbox();
 };

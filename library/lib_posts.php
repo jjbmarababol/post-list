@@ -28,7 +28,9 @@
 				 ];
 					$sql  = $this->DB->prepare("INSERT INTO ".$this->table['marababol']." (intro, ending, mtitle)VALUES(:intro,:ending,:mtitle)");
 					$sql->execute($postData);
-					$response = ["response" => "Success", "message" => "Post successfully saved!"];
+					$getCurrentId = $this->DB->query("SELECT LAST_INSERT_ID()");
+
+					$response = ["response" => "Success", "message" => "Post successfully saved!", "currentId"=>$getCurrentId->fetch(PDO::FETCH_ASSOC)];
 					return json_encode($response);
 		}
 	}

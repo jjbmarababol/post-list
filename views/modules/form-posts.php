@@ -16,6 +16,7 @@
 						<form id="postForm" method="post" action="javascript:void(0);" enctype="multipart/form-data">
 							<input type="hidden" name="controller" id="controller" value="updateInsert" class="post-field">
 							<input type="hidden" name="ending" id="ending" class="post-field">
+							<input type="hidden" name="newId" id="newId" class="post-field">
 						
 							<div class="input-field col s12">
 								<i class="material-icons prefix">comment</i>
@@ -56,7 +57,7 @@
 							<div class="file-field input-field col s12">
 								<div class="btn theme-grey-bg">
 									<span>File</span>
-									<input type="file" name="imageUrl" accept=".png, .jpg, .jpeg">
+									<input type="file" name="imageUrl" accept="image/*">
 								</div>
 								<div class="file-path-wrapper">
 									<input class="file-path validate" type="text">

@@ -1,10 +1,10 @@
 			</div>
 		</div>
 		<footer class="footer">
-			<div class="container-fluid">
+			<div class="container">
 				
-				<p class="copyright pull-right">
-					&copy; <script>document.write(new Date().getFullYear())</script> <a href="http://www.facebook.com/imlogicgates">Service Inspection</a>
+				<p class="copyright">
+					&copy; <script>document.write(new Date().getFullYear())</script> <a href="http://www.facebook.com/imlogicgates">Jig James Marababol</a>
 				</p>
 			</div>
 		</footer>
